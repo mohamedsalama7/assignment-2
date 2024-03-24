@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border-rad: 8px
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: #1abc9c;
+}
+
+.box {
+  width: 450px;
+  transform: scale(0);
+  opacity: 0;
+  animation: box 1.3s forwards;
+}
+
+.box .header {
+  background: #16a085;
+  width: 100%;
+  padding: 20px;
+  border-top-right-radius: var(--border-rad);
+  border-top-left-radius: var(--border-rad);
+}
+
+.box .header h2 {
+  width: fit-content;
+  color: white;
+  text-transform: capitalize;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.box .form {
+  background: white;
+  padding: 30px;
+  border-bottom-left-radius: var(--border-rad);
+  border-bottom-right-radius: var(--border-rad);
+}
+
+.box .form .first-inp, .second-inp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.box .form .first-inp i, .second-inp i{
+  width: 40px;
+  height: 40px;
+  background:#16a085;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.box .form .first-inp input, .second-inp input {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.link-one {
+  color: #1abc9c;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #16a085;
+  color: white;
+  font-size: 22px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+button:hover {
+  background: #16a084e4;
+  transition: .3s;
+}
+
+.box .form p {
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  color: black;
+  font-size: 18px;
+}
+
+.box .form p a {
+  text-decoration: none;
+  color: #16a085;
+}
+
+
+
+@keyframes box {
+  0% {
+     top: -1200px;
+     transform: scale(0);
+  }
+  100% {
+    top: 0;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
